@@ -1,0 +1,36 @@
+step 1:
+
+download the deb file :
+
+file is here ------>  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+Step 2:
+
+install the deb ------->
+
+dpkg -i google-chrome-stable_current_amd64.deb
+
+Step 3:
+
+apt-get install libappindicator1
+ 
+# Once the above packages has been installed, issue the following command
+# so that all the dependencies will get installed properly
+ 
+apt-get -f install
+
+Step 3: Now comes the issue, you cannot run Chrome, yet
+
+This is where things get ugly. If you try to open up google chrome, it won¡¯t open. Nothing would happen. Actually, you won¡¯t see any error messages. It just won¡¯t open. And there is a reason why it won¡¯t open, that¡¯s because you¡¯re trying to run it as ¡°root¡±.
+
+Default user in Kali is ¡°root¡± and it was done for a reason, Kali is not intended to use as a daily OS. But that does not mean that you can¡¯t use it as a daily OS. In fact, Kali 2.0 is my main OS and it runs without any issues.
+
+If you want to use Chrome, you have two options:
+
+In fact there are several methods by which you can use Google chrome. Most of them involve enabling chrome to be run as root. This is not the right way to handle things. There is a reason why chrome refuses to run as root. That¡¯s because, if you run the browser as root, then someone exploiting your browser could get root privileges. But, anyway, let¡¯s cut to the chase.
+
+Create a normal user with sudo privileges to use daily, and use ¡°sudo su -¡± to switch to root whenever you want.
+This is the most preferred method. This is how I use Kali. If you want to know how to set up a sudo user in Kali, please go HERE
+Create another user and switch to that user in a terminal and open up the applications like google chrome or VLC. Let me explain this for you:
+This is how it¡¯s done in the second option:
+

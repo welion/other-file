@@ -24,5 +24,5 @@ def printGeoInfo(target):
     print '[+] Longitude: ' + str(longitude) + ', Latitude:' + str(latitude)
     
 if __name__ == '__main__':
-    target = "210.13.121.74"
+    target = "103.207.70.48"
     printGeoInfo(target)
