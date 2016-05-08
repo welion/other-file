@@ -34,3 +34,16 @@ This is the most preferred method. This is how I use Kali. If you want to know h
 Create another user and switch to that user in a terminal and open up the applications like google chrome or VLC. Let me explain this for you:
 This is how it¡¯s done in the second option:
 
+
+
+
+
+
+
+install Firefox
+
+apt-get remove iceweasel
+echo -e "\ndeb http://downloads.sourceforge.net/project/ubuntuzilla/mozilla/apt all main" | tee -a /etc/apt/sources.list > /dev/null
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com C1289A29
+apt-get update
+apt-get install firefox-mozilla-build
