@@ -1,0 +1,17 @@
+一般普通用户登录服务器，使用sudo命令之后，发现过一个时间不用sudo就会要求重新输入sudo密码，有什么好的方法让sudo的密码保持得更长一些呢？
+
+sudo visudo
+
+找到
+
+Defaults    env_reset
+
+在后面加上
+
+,timestamp_timeout=180
+
+变成
+
+Defaults    env_reset,timestamp_timeout=180
+
+即空闲时sudo保持3分钟，如果不想保持，每次需要输入密码，则值设置为-1即可。
